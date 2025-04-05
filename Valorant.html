@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <title>Valorant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container" id="login-screen">
+        <h2 class="glow-text">Enter Your Name</h2>
+        <input type="text" id="nickname" placeholder="Enter your nickname" />
+
+        <h2 class="typewriter" >Choose Your Agent</h2>
+        <div id="agent-list">
+            <!-- Agent items -->
+            <div class="agent-item" onclick="selectAgent('Jett')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/e/e3/Jett_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202742" alt="Jett" />
+                <span>Jett</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Phoenix')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/5/52/Phoenix_%28Full%29.png/revision/latest/scale-to-width-down/1000?cb=20230412090628" alt="Phoenix" />
+                <span>Phoenix</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('brimstone')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/8/81/Brimstone_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202719" alt="Brimstone" />
+                <span>Brimstone</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Cypher')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/5/55/Cypher_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202731" alt="Cypher" />
+                <span>Cypher</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Sova')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/c/c5/Sova_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202832" alt="Sova" />
+                <span>Sova</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Sage')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/0/00/Sage_%28Full%29.png/revision/latest/scale-to-width-down/1000?cb=20230412090626" alt="Sage" />
+                <span>Sage</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Reyna')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/3/36/Reyna_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202820" alt="Reyna" />
+                <span>Reyna</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Astra')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/e/e0/Astra_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202708" alt="Astra" />
+                <span>Astra</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Viper')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/8/85/Viper_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202837" alt="Viper" />
+                <span>Viper</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Yoru')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/1/1e/Yoru_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202841" alt="Yoru" />
+                <span>Yoru</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Skye')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/7/7f/Skye_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202828" alt="Skye" />
+                <span>Skye</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Breach')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/2/24/Breach_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202713" alt="Breach" />
+                <span>Breach</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Neon')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/f/fe/Neon_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202800" alt="Neon" />
+                <span>Neon</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Omen')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/0/0e/Omen_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202807" alt="Omen" />
+                <span>Omen</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('KAY/O')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/8/8c/KAYO_%28Full%29.png/revision/latest/scale-to-width-down/1000?cb=20230412090657" alt="KAY/O" />
+                <span>KAY/O</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Killjoy')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/7/76/Killjoy_%28Full%29.png/revision/latest/scale-to-width-down/1000?cb=20230412090619" alt="Killjoy" />
+                <span>Killjoy</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Harbor')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/5/5c/Harbor_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20221018133900" alt="Harbor" />
+                <span>Harbor</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Fade')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/e/e8/Fade_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20220810202738" alt="Fade" />
+                <span>Fade</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('ISO')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/5/5f/Iso_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20231031131018" alt="ISO" />
+                <span>ISO</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Gekko')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/a/a4/Gekko_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20230304203025" alt="Gekko" />
+                <span>Gekko</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Deadlock')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/a/aa/Deadlock_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20230627132700" alt="Deadlock" />
+                <span>Deadlock</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Clove')">
+                <img src="https://static.wikia.nocookie.net/valorant-lore/images/1/15/Clove_-_Full_body.png/revision/latest/scale-to-width-down/1000?cb=20240328050335" alt="Clove" />
+                <span>Clove</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Vyse')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/d/d4/Vyse_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20240827165746" alt="Vyse" />
+                <span>Vyse</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Tejo')">
+                <img src="https://static.wikia.nocookie.net/valorant-lore/images/f/f5/Tejo_-_Full_body.png/revision/latest/scale-to-width-down/1000?cb=20250107233316" alt="Tejo" />
+                <span>Tejo</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Waylay')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/4/4f/Waylay_Artwork_Full.png/revision/latest/scale-to-width-down/1000?cb=20250304181227" alt="Waylay" />
+                <span>Waylay</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Raze')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/5/52/Raze_%28Full%29.png/revision/latest/scale-to-width-down/1000?cb=20230412090638" alt="Raze" />
+                <span>Raze</span>
+            </div>
+            <div class="agent-item" onclick="selectAgent('Chamber')">
+                <img src="https://static.wikia.nocookie.net/valorant/images/1/1e/Chamber_%28Full%29.png/revision/latest/scale-to-width-down/1000?cb=20230412090047" alt="Chamber" />
+                <span>Chamber</span>
+            </div>
+        </div>
+        <p class="glow-text-agent" >Selected Agent: <span id="selectedAgent">None</span></p>
+        <button  class="center-button" onclick="startChat()" >Start Chat</button>
+    </div>
+
+    <div id="chat-screen" style="display: none;">
+        <h2 class="typewriter" >Chat Room</h2>
+        <div id="chatBox" class="chat-box"></div>
+        <div class="chat-input-container">
+            <input type="text" id="messageInput" class="chat-input" placeholder="Type your message..." />
+            <button onclick="sendMessage()" class="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
